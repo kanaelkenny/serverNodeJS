@@ -23,16 +23,6 @@ app.get('/', async(req, res)=>{
 
 })
 
-app.get('/consulta', async(req, res)=>{
-    try {
-        const { data } = await axios("https://www.kooapp.com/apiV1/users/handle/kanael")
-        console.log(data)
 
-        return res.json(data)
-    } catch (error) {
-        console.error(error)   
-    }
-
-})
 
 app.listen(5600);
